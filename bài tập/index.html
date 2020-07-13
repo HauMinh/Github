@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>bài tập</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          .container{
+              border: 1px solid black;
+              width: 500px;
+              height: 300px;
+              margin-left: 400px;
+              margin-top: 40px;
+              background-color: silver;
+          }
+          input{ 
+              margin-top: 20px;
+              margin-left: 10px;
+              outline:0;
+          }
+          button{ margin-top:10px;
+          }
+          #ketqua{ 
+              margin-top: 15px;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="container">  
+            <div>
+                <div>
+                   <label> Nhập a:</label>
+                   <input type="text" id="number1" /> 
+                </div>
+                <div>
+                   <label> Nhập b:</label>
+                   <input type="text" id="number2"/>
+                </div>
+                <button onclick="tong();">Phép Cộng </button>
+                <button onclick="hieu();">Phép Trừ </button>
+                <button onclick="tich();"> Phép Nhân</button>
+                <button onclick="thuong();">Phép Chia</button>
+            </div>
+            <div id="ketqua"> </div>
+       </div>   
+        <script> 
+            function tong(){
+              var a = document.getElementById("number1").value;
+              var b = document.getElementById("number2").value;
+                 c =parseInt(a) + parseInt(b);
+                 document.getElementById("ketqua").innerHTML ="kết quả = " +c;
+              }
+            function hieu(){
+              var a = document.getElementById("number1").value;
+              var b = document.getElementById("number2").value;
+                 c =parseInt(a) - parseInt(b);
+                 document.getElementById("ketqua").innerHTML ="kết quả = " +c;
+              } 
+            function tich(){
+              var a = document.getElementById("number1").value;
+              var b = document.getElementById("number2").value;
+                 c =parseInt(a) * parseInt(b);
+                 document.getElementById("ketqua").innerHTML ="kết quả = " +c;
+              }  
+            function thuong(){
+              var a = document.getElementById("number1").value;
+              var b = document.getElementById("number2").value;
+                 c =parseInt(a) / parseInt(b);
+                 document.getElementById("ketqua").innerHTML ="kết quả = " +c;
+              }    
+        </script>
+    </body>
+</html>
